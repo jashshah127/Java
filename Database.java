@@ -7,7 +7,7 @@ import java.util.Iterator;
  *
  * Written as a first demo program for BlueJ.
  *
- * @author  Michael Kölling
+ * @author  Jash
  * @version 1.1, March 2002
  */
 
