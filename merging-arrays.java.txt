@@ -1,0 +1,89 @@
+//4.	W.P. to merge two arrays in third array .also sort that array in ascending order.
+import java.util.Scanner;
+class Array
+{
+	int a[];
+	Array()
+	{
+		a=new int[5];
+		for(int i=0;i<a.length;i++)
+			a[i]=i;
+	}
+	Array(int x[])
+	{
+		a=x;
+	}
+	void read()
+	{
+		Scanner sc=new Scanner(System.in);
+		for(int i=0;i<a.length;i++)
+			a[i]=sc.nextInt();
+	}	
+	void disp()
+	{
+		for(int i=0;i<a.length;i++)
+			System.out.print(a[i] + " ");
+	}
+	int[] merge(int x[])
+	{
+		int temp[]=new int[a.length+x.length];
+		for(int i=0;i<temp.length;i++)
+		{
+			if(i<a.length)
+				temp[i]=a[i];
+			else
+				temp[i]=x[i-a.length];
+		}
+		for(int i=0;i<temp.length;i++)
+		{
+			for(int j=0;j<temp.length-i-1;j++)
+			{
+				if(temp[j]>temp[j+1])
+				{
+					int temp1=temp[j];
+					temp[j]=temp[j+1];
+					temp[j+1]=temp1;
+				}
+			}
+		}
+		return temp;
+	}
+	void sort()
+	{
+		for(int i=0;i<a.length;i++)
+		{
+			for(int j=0;j<a.length-i-1;j++)
+			{
+				if(a[j]>a[j+1])
+				{
+					int temp=a[j];
+					a[j]=a[j+1];
+					a[j+1]=temp;
+				}
+			}
+		}
+	}
+}
+class MAIN
+{
+	public static void main(String A[])
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter Sizes of arrays: ");
+		int m=sc.nextInt();
+		int n=sc.nextInt();
+		int a[],b[];
+		a=new int[m];
+		b=new int[n];
+		System.out.println("Enter array 1:");
+		for(int i=0;i<m;i++)
+				a[i]=sc.nextInt();
+		System.out.println("Enter array 2:");
+		for(int i=0;i<n;i++)
+				b[i]=sc.nextInt();
+		Array A_ob=new Array(a);
+		Array res=new Array(A_ob.merge(b));
+		System.out.println("After Merge ang Sort:");
+		res.disp();		
+	}
+}
