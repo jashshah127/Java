@@ -1,0 +1,39 @@
+<head>
+		<meta charset="utf-8">
+		<title>Web Design for Everyone | HTML5 </title>
+		<meta name="description" content="HTML5">
+		<meta name="author" content="Colleen van Lent">
+	</head>
+	
+	
+	<header>
+			<div class="container">
+				<!-- logo -->
+				<div>
+					<a href="index.html"><img id="logo" src="images/newlogo.png" alt="WD4E"></a>
+				</div>
+
+				<!-- name-and-slogan -->
+				<div>
+					<div><a href="index.html">WD4E</a></div>
+					<div> <a target="_blank" href="http://www.intro-webdesign.com">Web Design For Everybody</a></div>
+				</div>
+
+				<!-- main-navigation start -->
+				<!-- ================ -->
+
+				<!-- navbar start -->
+				<!-- ================ -->
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="html5.html">HTML5</a></li>
+						<li><a href="css3.html">CSS3</a></li>
+						<li><a href="javascript.html">JavaScript</a></li>
+						<li><a href="responsive.html">Responsive Design</a></li>
+						<li><a href="resources.html">Resources</a></li>
+					</ul>
+				</nav>
+				<!-- navbar end -->
+			</div>
+		</header>
